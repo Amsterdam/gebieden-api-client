@@ -1,0 +1,31 @@
+services:
+  openapi-generator-cli:
+    image: openapitools/openapi-generator-cli:v7.12.0
+    command:
+      - "generate"
+      - "-i"
+      - "https://api.data.amsterdam.nl/v1/gebieden/"
+      - "-g"
+      - "python"
+      - "-o"
+      - "/local"
+      - "--package-name"
+      - "gebieden_api_client"
+      - "--git-host"
+      - "github.com"
+      - "--git-user-id"
+      - "Amsterdam"
+      - "--git-repo-id"
+      - "gebieden-api-client"
+      - "--library"
+      - "asyncio"
+      - "-t"
+      - "/local/python"
+    volumes:
+      - ".:/local"
+  gebieden-api-client:
+    image: amsterdam/gebieden-api-client
+    build:
+      context: .
+    volumes:
+      - ".:/opt/gebieden-api-client"
