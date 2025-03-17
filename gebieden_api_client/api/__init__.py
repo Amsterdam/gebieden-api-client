@@ -1,0 +1,12 @@
+# flake8: noqa
+
+# import apis into api package
+from gebieden_api_client.api.bouwblokken_api import BouwblokkenApi
+from gebieden_api_client.api.buurten_api import BuurtenApi
+from gebieden_api_client.api.ggpgebieden_api import GgpgebiedenApi
+from gebieden_api_client.api.ggwgebieden_api import GgwgebiedenApi
+from gebieden_api_client.api.grootstedelijke_projecten_api import GrootstedelijkeProjectenApi
+from gebieden_api_client.api.stadsdelen_api import StadsdelenApi
+from gebieden_api_client.api.stedelijkgebiedprojectofbelangen_api import StedelijkgebiedprojectofbelangenApi
+from gebieden_api_client.api.wijken_api import WijkenApi
+
